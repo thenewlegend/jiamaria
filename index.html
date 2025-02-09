@@ -74,24 +74,43 @@
     <section id="home" class="hero section light-background">
 
       <img src="assets/img/hero-bg.jpg" alt="">
+        <div class="container" data-aos="zoom-out">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <h2>Jia Maria P J</h2>
+                    <p>I'm <span class="typed" data-typed-items="Photographer, Designer, Freelancer "> </span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/taurustale.s" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/jia-maria/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://portfolio.jiamaria.com/" target="_blank"><i class="bi bi-download"></i></a>
+                        <button id="playButton"><i class="bi bi-music-note-beamed"></i></button>
+                        <audio id="backgroundMusic" loop>
+                            <source src="assets\music\bg-music.ogg" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
 
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <h2>Jia Maria P J</h2>
-            <p>I'm <span class="typed" data-typed-items="Photographer, Designer, Freelancer "> </span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <div class="social-links">
-              <!--<a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-facebook"></i></a> -->
-              <a href="https://www.instagram.com/taurustale.s" target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/jia-maria/" target="_blank"><i class="bi bi-linkedin"></i></a>
-              <a href="https://portfolio.jiamaria.com/" target="_blank"><i class="bi bi-download"></i></a>
+                        <button id="quoteButton" onclick="openPopup()" style="margin-left: 15px;"><i class="bi bi-chat-left-heart"></i></button>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="quotePopup">
+              <div>
+                  <h3 id="quoteText"></h3>
+                  <h6 id="quoteAuthor"></h6>
+    
+                  <button id="closeButton" onclick="closePopup()">
+                      X
+                      <div id="progressBar"></div>
+                  </button>
+    
+              </div>
+              
         </div>
-            
-            
-          </div>
-        </div>
-      </div>
+
+        
 
     </section><!-- /Hero Section -->
 

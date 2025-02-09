@@ -55,10 +55,137 @@
 }
 
  
+#quotePopup {
+  position: fixed; /* Fixed position */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the popup */
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent backdrop */
+  border-radius: 10%;
+  display: none; /* Hidden by default */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 1001; /* Ensure it's on top */
+  
+}
+
+#quotePopup > div {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  text-align: center;
+  background-color: #ffffffc1;
+  padding: 80px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1002; /* Ensure content is above backdrop */
+  background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
 
 
 
+.center
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(75, 75, 250, 0.3);
+  border-radius: 3px;
+}
 
+
+
+#closeButton {
+  position: relative; /* Position it absolutely */
+  top: 10px; /* Adjust top position */
+  right: 10px; /* Adjust right position */
+  padding: 8px 12px; /* Slightly smaller button */
+  background-color: transparent; /* Make background transparent */
+  color: #000000; /* Gray color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem; /* Slightly larger font */
+  /* Add a subtle hover effect */
+  transition: background-color 0.3s, color 0.3s;
+  display: flex; /* Use flexbox for progress bar */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+
+}
+
+#closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Subtle gray background on hover */
+  color: #000000; /* Darker gray on hover */
+}
+
+#progressBar {
+  width: 0%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent gray */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit; /* Inherit border-radius from button */
+  transition: width 5.6s linear; /* Smooth progress animation */
+  z-index: -1; /* Place behind the text */
+}
+
+#quoteButton {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+
+#playButton {
+  color: 666768;
+  background-color:white;
+  aspect-ratio: 1;
+  border: none;
+  cursor: pointer; /* Indicate it's clickable */
+  border-radius: 50%;
+}
+
+#playButton.playing { /* Style when playing */
+  background-color: var(--accent-color);
+  color: white;
+}
 
 
 
